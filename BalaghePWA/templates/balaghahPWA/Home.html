@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+{% load static %}
+{% load pwa %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design Bootstrap</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'balaghaPWA/css/bootstrap.min.css' %}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href=" {% static 'balaghaPWA/css/mdb.min.css' %}" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="{% static 'balaghaPWA/css/style.css' %}" rel="stylesheet">
+  {% progressive_web_app_meta %}
+</head>
+
+<body>
+<!--Main Navigation-->
+<header>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark pink scrolling-navbar">
+    <a class="navbar-brand" href="#"><strong>Nahj Al-Balaghah</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Continue reading</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Critics and suggestions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Feedback</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Share</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav nav-flex-icons">
+        <li class="nav-item">
+          <a class="nav-link"><i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><i class="fab fa-instagram"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div class="container-fluid">
+  <div id="mainRowPhones">
+      <form method="post">
+        {% csrf_token %}
+            <div class="row" style="margin-top: 22%;">
+              <div class="col-3 col-sm-3"></div>
+              <div class="col-6 col-sm-6">
+                  <div class="card">
+                    <!-- Card image -->
+                    <div class="view overlay">
+                      <img class="card-img-top" src="{% static 'balaghaPWA/img/01.png' %}" alt="Card image cap">
+                      <button style="display: contents" value="1" name="list">
+                        <div class="mask rgba-white-slight"></div>
+                      </button>
+                    </div>
+                    <!-- Card content -->
+                    <div class="card-body">
+                      <!-- Title -->
+                    <h4 class="card-title">Preface</h4>
+                    </div>
+                </div>
+                </div>
+              <div class="col-6 col-sm-6"></div>
+            </div>
+            <div class="row" style="margin-top: 5%;">
+              <div class="col-6 col-sm-6">
+                  <div class="card">
+                  <!-- Card image -->
+                    <div class="view overlay">
+                      <img class="card-img-top" src="{% static 'balaghaPWA/img/03.png' %}" alt="Card image cap">
+                    </div>
+                  <!-- Card content -->
+                    <div class="card-body">
+                    <!-- Title -->
+                    <h4 class="card-title">Sermons</h4>
+                  </div>
+                </div>
+            </div>
+              <div class="col-6 col-sm-6">
+              <div class="card">
+                <!-- Card image -->
+                  <div class="view overlay">
+                    <img class="card-img-top" src="{% static 'balaghaPWA/img/04.png' %}" alt="Card image cap">
+                    <button style="display: contents" value="3" name="list">
+                      <div class="mask rgba-white-slight"></div>
+                    </button>
+                  </div>
+                <!-- Card content -->
+                  <div class="card-body">
+                  <!-- Title -->
+                  <h4 class="card-title">Letters</h4>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="row" style="margin-top: 5%; margin-bottom: 10%;">
+      <div class="col-6 col-sm-6">
+          <div class="card">
+            <!-- Card image -->
+            <div class="view overlay">
+              <img class="card-img-top" src="{% static 'balaghaPWA/img/05.png' %}" alt="Card image cap">
+              <button style="display: contents" value="4" name="list">
+                <div class="mask rgba-white-slight"></div>
+              </button>
+            </div>
+            <!-- Card content -->
+            <div class="card-body">
+            <!-- Title -->
+            <h4 class="card-title">Aphorisms</h4>
+          </div>
+        </div>
+        </div>
+      <div class="col-6 col-sm-6">
+      <div class="card">
+          <!-- Card image -->
+          <div class="view overlay">
+            <img class="card-img-top" src="{% static 'balaghaPWA/img/02.png' %}" alt="Card image cap">
+            <button style="display: contents" value="5" name="list">
+              <div class="mask rgba-white-slight"></div>
+            </button>
+          </div>
+          <!-- Card content -->
+          <div class="card-body">
+          <!-- Title -->
+          <h4 class="card-title">Rare Words</h4>
+        </div>
+      </div>
+    </div>
+    </div>
+      </form>
+  </div>
+  <div id="mainRowCamputer">
+      <form method="post">
+          {% csrf_token %}
+          <div class="row" style="margin-top: 8%;">
+              <div class="col-md-1"></div>
+              <div class="col-md-2">
+                  <div class="card">
+                    <!-- Card image -->
+                    <div class="view overlay">
+                      <img class="card-img-top" src="{% static 'balaghaPWA/img/01.png' %}" alt="Card image cap">
+                      <button name="list" value="1">
+                        <div class="mask rgba-white-slight"></div>
+                      </button>
+                    </div>
+                    <!-- Card content -->
+                    <div class="card-body">
+                      <!-- Title -->
+                    <h4 class="card-title">Preface</h4>
+                    </div>
+                </div>
+                </div>
+              <div class="col-md-2">
+                  <div class="card">
+                  <!-- Card image -->
+                    <div class="view overlay">
+                      <img class="card-img-top" src="{% static 'balaghaPWA/img/03.png' %}" alt="Card image cap">
+                      <button name="list" value="2">
+                        <div class="mask rgba-white-slight"></div>
+                      </button>
+                    </div>
+                  <!-- Card content -->
+                    <div class="card-body">
+                    <!-- Title -->
+                    <h4 class="card-title">Sermons</h4>
+                  </div>
+                </div>
+                </div>
+              <div class="col-md-2">
+              <div class="card">
+                <!-- Card image -->
+                  <div class="view overlay">
+                    <img class="card-img-top" src="{% static 'balaghaPWA/img/04.png' %}" alt="Card image cap">
+                    <button name="list" value="3">
+                      <div class="mask rgba-white-slight"></div>
+                    </button>
+                  </div>
+                <!-- Card content -->
+                  <div class="card-body">
+                  <!-- Title -->
+                  <h4 class="card-title" style="text-align: center;">Letters</h4>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-2">
+                  <div class="card">
+                    <!-- Card image -->
+                    <div class="view overlay">
+                      <img class="card-img-top" src="{% static 'balaghaPWA/img/05.png' %}" alt="Card image cap">
+                      <button name="list" value="4">
+                        <div class="mask rgba-white-slight"></div>
+                      </button>
+                    </div>
+                    <!-- Card content -->
+                    <div class="card-body">
+                    <!-- Title -->
+                    <h4 class="card-title">Aphorisms</h4>
+                  </div>
+                </div>
+                </div>
+              <div class="col-md-2">
+              <div class="card">
+                  <!-- Card image -->
+                  <div class="view overlay">
+                    <img class="card-img-top" src="{% static 'balaghaPWA/img/02.png' %}" alt="Card image cap">
+                    <button name="list" value="5">
+                      <div class="mask rgba-white-slight"></div>
+                    </button>
+                  </div>
+                  <!-- Card content -->
+                  <div class="card-body">
+                  <!-- Title -->
+                  <h4 class="card-title">Rare Words</h4>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-1"></div>
+            </div>
+      </form>
+  </div>
+</div>
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="{% static 'balaghaPWA/js/jquery-3.4.1.min.js' %}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{% static 'balaghaPWA/js/popper.min.js' %}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{% static 'balaghaPWA/js/bootstrap.min.js' %}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{% static 'balaghaPWA/js/mdb.min.js' %}"></script>
+  <script type="text/javascript">
+      document.getElementById("mainRowCamputer").classList.toggle("hideAll")
+      document.getElementById("mainRowPhones").classList.toggle("showAll")
+  </script>
+
+</body>
+
+</html>

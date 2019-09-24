@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+{% load static %}
+{% load pwa %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{{ listTitle }}</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'balaghaPWA/css/bootstrap.min.css' %}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href=" {% static 'balaghaPWA/css/mdb.min.css' %}" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="{% static 'balaghaPWA/css/style.css' %}" rel="stylesheet">
+  {% progressive_web_app_meta %}
+</head>
+
+<body>
+<!--Main Navigation-->
+<header style="margin-bottom: 20%;">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark pink scrolling-navbar">
+    <a class="navbar-brand" href="{% url 'index' %}"><strong>Back</strong></a>
+      <p class="navbar-nav" style="text-align: left; color: white">{{ listTitle }}</p>
+  </nav>
+</header>
+
+<div class="container-fluid">
+<!--Slider with for pic-->
+  <div class="carousel slide" data-ride="carousel" id="carouselExample">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-4 col-sm-4" style="border-color: #cccccd; border-style: solid; border-width: 1px"><img class="d-block w-100" src="{% static 'balaghaPWA/img/01.png' %}" alt="1 slide"></div>
+                    <div class="col-4 col-sm-4" style="border-color: #cccccd; border-style: solid; border-width: 1px"><img class="d-block w-100" src="{% static 'balaghaPWA/img/03.png' %}" alt="2 slide"></div>
+                    <div class="col-4 col-sm-4" style="border-color: #cccccd; border-style: solid; border-width: 1px"><img class="d-block w-100" src="{% static 'balaghaPWA/img/04.png' %}" alt="3 slide"></div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-4 col-sm-4" style="border-color: #cccccd; border-style: solid; border-width: 1px"><img class="d-block w-100" src="{% static 'balaghaPWA/img/05.png' %}" alt="1 slide"></div>
+                    <div class="col-4 col-sm-4" style="border-color: #cccccd; border-style: solid; border-width: 1px"><img class="d-block w-100" src="{% static 'balaghaPWA/img/02.png' %}" alt="2 slide"></div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <i class="fa fa-chevron-left fa-lg text-muted"></i>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
+            <i class="fa fa-chevron-right fa-lg text-muted"></i>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+  <div id="mainRowPhones">
+  <form method="post">
+  {% csrf_token %}
+    <div class="row" style="margin-top: 2%;">
+        <div class="col-md-12">
+            <h5>{{ listTitle }}</h5>
+        </div>
+    </div>
+    <div class="row">
+        <hr style="background-color: #D1D2D3; width: 100%;">
+    </div>
+      {% for i in titles %}
+          <div class="row" style="margin-bottom: 3%;">
+            <div class="col-12 col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                      <button value="{{ i.id }}" name="goToContent" style="display: contents" ><p class="card-text">{{ i.title_En }}</p></button>
+                  </div>
+                </div>
+            </div>
+          </div>
+      {% endfor %}
+  </form>
+  </div>
+
+  <div id="mainRowCamputer">
+      {% for i in titles %}
+          <div class="row" style="margin-bottom: 3%;">
+            <div class="col-12 col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                      <button value="id" name="goToContent" ><p class="card-text">{{ i.title_En }}</p></button>
+                  </div>
+                </div>
+            </div>
+          </div>
+      {% endfor %}
+  </div>
+</div>
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="{% static 'balaghaPWA/js/jquery-3.4.1.min.js' %}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{% static 'balaghaPWA/js/popper.min.js' %}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{% static 'balaghaPWA/js/bootstrap.min.js' %}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{% static 'balaghaPWA/js/mdb.min.js' %}"></script>
+  <script type="text/javascript">
+      document.getElementById("mainRowCamputer").classList.toggle("hideAll")
+      document.getElementById("mainRowPhones").classList.toggle("showAll")
+  </script>
+
+
+</body>
+
+</html>

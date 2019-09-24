@@ -1,0 +1,23 @@
+{% load static %}
+.card-title {
+    text-align: center;
+    font-size: 17px;
+    font-family: "Myriad Pro";
+}
+
+@media only screen and (max-width: 998px) {
+    .hideAll {
+        display: none;
+    }
+}
+@media only screen and (min-width: 998px) {
+    .showAll {
+        display: none;
+    }
+}
+
+@font-face {
+  font-family: 'abc';
+  src: local('Abc'),
+       url('../font/')format("truetype");
+}

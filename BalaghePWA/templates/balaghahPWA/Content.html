@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+{% load pwa %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design Bootstrap</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'balaghaPWA/css/bootstrap.min.css' %}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href=" {% static 'balaghaPWA/css/mdb.min.css' %}" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="{% static 'balaghaPWA/css/style.css' %}" rel="stylesheet">
+  {% progressive_web_app_meta %}
+</head>
+
+<body>
+<!--Main Navigation-->
+<header style="margin-bottom: 20%;">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark pink scrolling-navbar">
+    <a class="navbar-brand" href="{% url 'index' %}"><strong>Back</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    </button>
+      <form method="post">
+          {% csrf_token %}
+          <button class="navbar-nav" style="display: contents; color: white" class="nav-link" name="copy">Copy Text</button>
+      </form>
+{#    <div class="collapse navbar-collapse" id="navbarSupportedContent">#}
+{#      <ul class="navbar-nav mr-auto">#}
+{#        <form method="post">#}
+{#            {% csrf_token %}#}
+{#            <li class="nav-item">#}
+{#            <button style="display: contents" class="nav-link" name="copy">Copy text <span class="sr-only">(current)</span></button>#}
+{#        </li>#}
+{#        </form>#}
+{#      </ul>#}
+{#    </div>#}
+  </nav>
+</header>
+
+<div class="container-fluid">
+  <div id="mainRowPhones">
+      <div class="col-xs-2"></div>
+      <div class="col-xs-8">
+{#          {% for bodyArabic in mainBody %}#}
+            <p style="text-align: right; color: #0d47a1; font-family: 'Adobe Arabic'; font-size: 20px; line-height: 200%;">{{ bodyAr }}</p>
+            <hr style="background-color: #0d47a1; width: 100%";>
+            <p style="text-align: left; font-family: 'Myriad Pro'; font-size: 18px; line-height: 200%;">{{ bodyEn }}</p>
+            <hr style="background-color: #0d47a1; width: 100%";>
+{#          {% endfor %}#}
+      </div>
+      <div class="col-xs-2"></div>
+
+  </div>
+  <div id="mainRowCamputer">
+
+  </div>
+</div>
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="{% static 'balaghaPWA/js/jquery-3.4.1.min.js' %}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{% static 'balaghaPWA/js/popper.min.js' %}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{% static 'balaghaPWA/js/bootstrap.min.js' %}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{% static 'balaghaPWA/js/mdb.min.js' %}"></script>
+  <script type="text/javascript">
+      document.getElementById("mainRowCamputer").classList.toggle("hideAll")
+      document.getElementById("mainRowPhones").classList.toggle("showAll")
+  </script>
+</body>
+
+</html>
