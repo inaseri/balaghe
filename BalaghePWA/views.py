@@ -63,13 +63,13 @@ def contentView(request,contentID):
 
 
     # for copy and past an string to clipboard we use below command and 'pyperclip'
-    # pip install pyperclip
-    if request.method == "POST":
-        str = ""
-        for string in mainBody:
-            str = str + string
-        pyperclip.copy(str)
-        pyperclip.paste()
+    # # pip install pyperclip
+    # if request.method == "POST":
+    #     str = ""
+    #     for string in mainBody:
+    #         str = str + string
+    #     pyperclip.copy(str)
+    #     pyperclip.paste()
 
     context['bodyAr'] = bodyArabicArray
     context['bodyEn'] = bodyEnglishArray

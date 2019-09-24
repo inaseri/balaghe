@@ -28,27 +28,15 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     </button>
-      <form method="post">
-          {% csrf_token %}
-          <button class="navbar-nav" style="display: contents; color: white" class="nav-link" name="copy">Copy Text</button>
-      </form>
-{#    <div class="collapse navbar-collapse" id="navbarSupportedContent">#}
-{#      <ul class="navbar-nav mr-auto">#}
-{#        <form method="post">#}
-{#            {% csrf_token %}#}
-{#            <li class="nav-item">#}
-{#            <button style="display: contents" class="nav-link" name="copy">Copy text <span class="sr-only">(current)</span></button>#}
-{#        </li>#}
-{#        </form>#}
-{#      </ul>#}
-{#    </div>#}
+    <button class="navbar-nav" style="display: contents; color: white" class="nav-link" name="copy" onclick="copy()">Copy Text</button>
+
   </nav>
 </header>
 
 <div class="container-fluid">
   <div id="mainRowPhones">
       <div class="col-xs-2"></div>
-      <div class="col-xs-8">
+      <div class="col-xs-8" id="myInput">
 {#          {% for bodyArabic in mainBody %}#}
             <p style="text-align: right; color: #0d47a1; font-family: 'Adobe Arabic'; font-size: 20px; line-height: 200%;">{{ bodyAr }}</p>
             <hr style="background-color: #0d47a1; width: 100%";>
@@ -76,6 +64,22 @@
       document.getElementById("mainRowCamputer").classList.toggle("hideAll")
       document.getElementById("mainRowPhones").classList.toggle("showAll")
   </script>
+<script>
+    function copy() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+</script>
 </body>
 
 </html>
