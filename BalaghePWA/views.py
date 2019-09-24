@@ -74,7 +74,7 @@ def contentView(request,contentID):
     # context['bodyAr'] = bodyArabicArray
     # context['bodyEn'] = bodyEnglishArray
     # context['mainBody'] = mainBody
-    context['body']=body
+    context['bodies']=body
 
 
 
