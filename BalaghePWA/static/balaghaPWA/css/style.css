@@ -27,6 +27,10 @@ a.navbar-brand{color:white !important}
 
 }
 
+#gallery a {
+    display: contents !IMPORTANT;
+}
+
 @media only screen and (max-width: 998px) {
     .hideAll {
         display: none;
