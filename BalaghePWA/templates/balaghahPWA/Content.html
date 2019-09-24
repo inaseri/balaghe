@@ -76,8 +76,8 @@ function CopyToClipboard(containerid) {
     var range = document.createRange();
     range.selectNode(document.getElementById(containerid));
     window.getSelection().addRange(range);
-    window.getSelection().removeAllRanges();
     document.execCommand("copy");
+      window.getSelection().removeAllRanges();
     alert("text copied")
   }
 }
