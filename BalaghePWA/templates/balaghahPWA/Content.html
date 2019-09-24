@@ -28,7 +28,7 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     </button>
-    <button class="navbar-nav" style="display: contents; color: white" class="nav-link" name="copy" onclick="copy()">Copy Text</button>
+    <button class="navbar-nav" style="display: contents; color: white" class="nav-link" name="copy" onclick="CopyToClipboard('myInput')">Copy Text</button>
 
   </nav>
 </header>
@@ -65,19 +65,20 @@
       document.getElementById("mainRowPhones").classList.toggle("showAll")
   </script>
 <script>
-    function copy() {
-  /* Get the text field */
-  var copyText = document.getElementById("myInput");
+function CopyToClipboard(containerid) {
+  if (document.selection) {
+    var range = document.body.createTextRange();
+    range.moveToElementText(document.getElementById(containerid));
+    range.select().createTextRange();
+    document.execCommand("copy");
 
-  /* Select the text field */
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-
-  /* Copy the text inside the text field */
-  document.execCommand("copy");
-
-  /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
+  } else if (window.getSelection) {
+    var range = document.createRange();
+    range.selectNode(document.getElementById(containerid));
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    alert("text copied, copy in the text-area")
+  }
 }
 </script>
 </body>
