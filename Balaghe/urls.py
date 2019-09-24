@@ -16,7 +16,7 @@ v1_api.register(SectionResouce())
 urlpatterns = [
     path('', views.index, name='index'),
     url(r'list/(?P<type>[0-9]){1}/',views.list, name='list'),
-    url(r'content/(?P<contentID>[0-9]){1}/',views.contentView, name='content'),
+    url(r'content/(?P<contentID>[0-9]){1,3}/',views.contentView, name='content'),
     path('admin/', admin.site.urls),
     url(r'^api/', include(v1_api.urls)),
     url('', include('pwa.urls')),
