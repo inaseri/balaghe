@@ -21,7 +21,7 @@ a.navbar-brand{color:white !important}
 .w-33 {
     width: 33% !important;
     height: 33% !important;
-    margin-left: 2px;
+    margin-left: 4px;
     border-color: gray;
     border-width: 1px;
     border-style: dashed;
