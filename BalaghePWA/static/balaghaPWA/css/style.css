@@ -18,8 +18,14 @@ a.navbar-brand{color:white !important}
    scroll-snap-align: center;
 }
 
+.w-33 {
+    width: 33% !important;
+    border-color: gray;
+    border-width: 1px;
+    border-style: dashed;
+    border-radius: 5px;
 
-
+}
 
 @media only screen and (max-width: 998px) {
     .hideAll {
