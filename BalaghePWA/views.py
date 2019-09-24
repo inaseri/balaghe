@@ -43,23 +43,23 @@ def list(request,type):
 def contentView(request,contentID):
     context = {}
 
-    bodyEnglishArray = []
-    bodyArabicArray = []
-    mainBody = []
+    # bodyEnglishArray = []
+    # bodyArabicArray = []
+    # mainBody = []
     body = Section.objects.all().filter(content=contentID)
 
-    for body in body:
-        arabicBody = body.body_fa
-        arabicBody = strip_tags(arabicBody)
-        arabicBody = re.sub('[>}&#zwnj'']', '', arabicBody)
-        bodyArabicArray.append(arabicBody)
-        mainBody.append(arabicBody)
-
-        englishBody = body.body_ar
-        englishBody = strip_tags(englishBody)
-        englishBody = re.sub('[>}&#]', '', englishBody)
-        bodyEnglishArray.append(englishBody)
-        mainBody.append(englishBody)
+    # for body in body:
+    #     arabicBody = body.body_fa
+    #     # arabicBody = strip_tags(arabicBody)
+    #     # arabicBody = re.sub('[>}&#zwnj'']', '', arabicBody)
+    #     # bodyArabicArray.append(arabicBody)
+    #     mainBody.append(arabicBody)
+    #
+    #     # englishBody = body.body_ar
+    #     # englishBody = strip_tags(englishBody)
+    #     # englishBody = re.sub('[>}&#]', '', englishBody)
+    #     # bodyEnglishArray.append(englishBody)
+    #     mainBody.append(englishBody)
 
 
     # for copy and past an string to clipboard we use below command and 'pyperclip'
@@ -71,9 +71,10 @@ def contentView(request,contentID):
     #     pyperclip.copy(str)
     #     pyperclip.paste()
 
-    context['bodyAr'] = bodyArabicArray
-    context['bodyEn'] = bodyEnglishArray
-    context['mainBody'] = mainBody
+    # context['bodyAr'] = bodyArabicArray
+    # context['bodyEn'] = bodyEnglishArray
+    # context['mainBody'] = mainBody
+    context['body']=body
 
 
 

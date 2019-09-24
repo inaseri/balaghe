@@ -38,9 +38,9 @@
       <div class="col-xs-2"></div>
       <div class="col-xs-8" id="myInput">
 {#          {% for bodyArabic in mainBody %}#}
-            <p style="text-align: right; color: #0d47a1; font-family: 'Adobe Arabic'; font-size: 20px; line-height: 200%;">{{ bodyAr }}</p>
+            <p style="text-align: justify; color: #0d47a1; font-family: 'Adobe Arabic'; font-size: 20px; line-height: 200%; direction: rtl">{{ body }}</p>
             <hr style="background-color: #0d47a1; width: 100%";>
-            <p style="text-align: left; font-family: 'Myriad Pro'; font-size: 18px; line-height: 200%;">{{ bodyEn }}</p>
+            <p style="text-align: justify; font-family: 'Myriad Pro'; font-size: 18px; line-height: 200%; direction: ltr">{{ bodyEn }}</p>
             <hr style="background-color: #0d47a1; width: 100%";>
 {#          {% endfor %}#}
       </div>
@@ -76,8 +76,9 @@ function CopyToClipboard(containerid) {
     var range = document.createRange();
     range.selectNode(document.getElementById(containerid));
     window.getSelection().addRange(range);
+    window.getSelection().removeAllRanges();
     document.execCommand("copy");
-    alert("text copied, copy in the text-area")
+    alert("text copied")
   }
 }
 </script>
