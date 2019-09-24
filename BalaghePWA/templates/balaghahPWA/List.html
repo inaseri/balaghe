@@ -30,32 +30,40 @@
 </header>
 
 <div class="container-fluid">
-<!--Slider with for pic-->
-  <div class="carousel slide" data-ride="carousel" id="carouselExample">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="row">
-                    <div class="col-4 col-sm-4" style="border-color: #cccccd; border-style: solid; border-width: 1px"><img class="d-block w-100" src="{% static 'balaghaPWA/img/01.png' %}" alt="1 slide"></div>
-                    <div class="col-4 col-sm-4" style="border-color: #cccccd; border-style: solid; border-width: 1px"><img class="d-block w-100" src="{% static 'balaghaPWA/img/03.png' %}" alt="2 slide"></div>
-                    <div class="col-4 col-sm-4" style="border-color: #cccccd; border-style: solid; border-width: 1px"><img class="d-block w-100" src="{% static 'balaghaPWA/img/04.png' %}" alt="3 slide"></div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="row">
-                    <div class="col-4 col-sm-4" style="border-color: #cccccd; border-style: solid; border-width: 1px"><img class="d-block w-100" src="{% static 'balaghaPWA/img/05.png' %}" alt="1 slide"></div>
-                    <div class="col-4 col-sm-4" style="border-color: #cccccd; border-style: solid; border-width: 1px"><img class="d-block w-100" src="{% static 'balaghaPWA/img/02.png' %}" alt="2 slide"></div>
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-            <i class="fa fa-chevron-left fa-lg text-muted"></i>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
-            <i class="fa fa-chevron-right fa-lg text-muted"></i>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
+
+<div id="gallery">
+  <img class="d-block w-100" src="{% static 'balaghaPWA/img/01.png' %}" alt="1 slide">
+  <img class="d-block w-100" src="{% static 'balaghaPWA/img/03.png' %}" alt="2 slide">
+  <img class="d-block w-100" src="{% static 'balaghaPWA/img/04.png' %}" alt="3 slide">
+    <img class="d-block w-100" src="{% static 'balaghaPWA/img/05.png' %}" alt="1 slide">
+    <img class="d-block w-100" src="{% static 'balaghaPWA/img/02.png' %}" alt="2 slide">
+</div>
+{#<!--Slider with for pic-->#}
+{#  <div class="carousel slide" data-ride="carousel" id="carouselExample">#}
+{#        <div class="carousel-inner">#}
+{#            <div class="carousel-item active">#}
+{#                <div class="row">#}
+{#                    <div class="col-4 col-sm-4" style="border-color: #cccccd; border-style: solid; border-width: 1px"><img class="d-block w-100" src="{% static 'balaghaPWA/img/01.png' %}" alt="1 slide"></div>#}
+{#                    <div class="col-4 col-sm-4" style="border-color: #cccccd; border-style: solid; border-width: 1px"><img class="d-block w-100" src="{% static 'balaghaPWA/img/03.png' %}" alt="2 slide"></div>#}
+{#                    <div class="col-4 col-sm-4" style="border-color: #cccccd; border-style: solid; border-width: 1px"><img class="d-block w-100" src="{% static 'balaghaPWA/img/04.png' %}" alt="3 slide"></div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="carousel-item">#}
+{#                <div class="row">#}
+{#                    <div class="col-4 col-sm-4" style="border-color: #cccccd; border-style: solid; border-width: 1px"><img class="d-block w-100" src="{% static 'balaghaPWA/img/05.png' %}" alt="1 slide"></div>#}
+{#                    <div class="col-4 col-sm-4" style="border-color: #cccccd; border-style: solid; border-width: 1px"><img class="d-block w-100" src="{% static 'balaghaPWA/img/02.png' %}" alt="2 slide"></div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">#}
+{#            <i class="fa fa-chevron-left fa-lg text-muted"></i>#}
+{#            <span class="sr-only">Previous</span>#}
+{#        </a>#}
+{#        <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">#}
+{#            <i class="fa fa-chevron-right fa-lg text-muted"></i>#}
+{#            <span class="sr-only">Next</span>#}
+{#        </a>#}
+{#    </div>#}
 
   <div id="mainRowPhones">
   <form method="post">
