@@ -25,7 +25,7 @@ SECRET_KEY = 'o+e((ib^sejoj5y)%ys5#%qd+u8)=8g@d%8z7g@fzh&zf9p@ga'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.22','172.16.1.151','192.168.2.132']
+ALLOWED_HOSTS = ['192.168.1.22','172.16.1.151','192.168.2.132','balaghe.inaseri.ir']
 
 
 # Application definition
@@ -85,9 +85,9 @@ WSGI_APPLICATION = 'Balaghe.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Balaghah',
-        'USER': 'root',
-        'PASSWORD': '3802',
+        'NAME': 'inaseri_balaghe',
+        'USER': 'inaseri_balaghe',
+        'PASSWORD': '4~K~5cPRzN$c',
         'HOST': '127.0.0.1',
         'PORT': '',
     }
