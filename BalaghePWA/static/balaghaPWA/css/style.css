@@ -5,6 +5,10 @@
     font-family: "Myriad Pro";
 }
 
+
+a.navbar-brand{color:white}
+
+
 @media only screen and (max-width: 998px) {
     .hideAll {
         display: none;
@@ -19,5 +23,5 @@
 @font-face {
   font-family: 'abc';
   src: local('Abc'),
-       url('../font/')format("truetype");
+       url('../font/AdobeArabic-Bold_17.otf')format("truetype");
 }
