@@ -65,17 +65,27 @@
   </div>
 
   <div id="mainRowCamputer">
-      {% for i in titles %}
-          <div class="row" style="margin-bottom: 3%;">
-            <div class="col-12 col-md-12">
-                <div class="card">
-                  <div class="card-body">
-                      <button value="id" name="goToContent" ><p class="card-text">{{ i.title_En }}</p></button>
-                  </div>
-                </div>
+        <div class="row" style="margin-top: 6%;">
+            <div class="col-md-12">
+                <h5>{{ listTitle }}</h5>
             </div>
-          </div>
-      {% endfor %}
+        </div>
+        <div class="row">
+            <hr style="background-color: #D1D2D3; width: 100%;">
+        </div>
+        <form method="post">
+         {% for i in titles %}
+              <div class="row" style="margin-bottom: 3%;">
+                <div class="col-12 col-md-12">
+                    <div class="card">
+                      <div class="card-body">
+                          <a href="{% url 'content' i.id %}" name="goToContent" ><p class="card-text" style="display: contents">{{ i.title_En }}</p></a>
+                      </div>
+                    </div>
+                </div>
+              </div>
+          {% endfor %}
+        </form>
   </div>
 </div>
 
