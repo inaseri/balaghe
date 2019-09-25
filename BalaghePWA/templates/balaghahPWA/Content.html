@@ -46,9 +46,8 @@
       </div>
       <div class="col-xs-2"></div>
   </div>
-  <div id="mainRowCamputer">
-      <div class="col-md-2"></div>
-      <div class="col-md-8" id="myInput">
+  <div id="mainRowCamputer" style="margin-top: -140px;">
+      <div class="col-md-12" id="myInput">
           <p style="text-align: center; color: grey; font-family: abc; font-size: 37px;">{{ bodies.0.content.title_En }}</p>
           {% for body in bodies %}
             <div style="color: #027B96 !important; direction: rtl !important;">{{ body.body_fa|safe }}</div>
@@ -56,7 +55,6 @@
             <hr style="background-color: #027B96; width: 80%";>
           {% endfor %}
       </div>
-      <div class="col-md-2"></div>
   </div>
 
   </div>
